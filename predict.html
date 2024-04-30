@@ -1,0 +1,101 @@
+{% load static %} <!-- This loads static files like CSS and images. -->
+
+<!DOCTYPE html> 
+<html lang="en"> 
+
+<head> 
+	<meta charset="UTF-8"> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<title>Home_Page</title> 
+	<style> 
+		/* CSS Styles - Define the appearance of the page elements */ 
+		* { 
+			background-color: rgb(146, 243, 172); 
+		} 
+
+		img { 
+			background-color: rgb(146, 243, 172);
+			margin-left: 60%; 
+			margin-top: -15%; 
+			width: 400px; 
+		} 
+
+		.head { 
+			color: rgb(3, 72, 16); 
+			margin-top: 12%; 
+			margin-left: 15%; 
+		} 
+
+		.para { 
+			color: white; 
+			margin-left: 15%; 
+			font-size: 20px; 
+		} 
+
+		.btn { 
+			color: rgb(239, 232, 232);
+             background-color: green;
+             margin: 0 auto; /* Centers the button horizontally */
+             padding: 10px 20px;
+             font-weight: bold;
+             font-size: 15px;
+             border-radius: 5px;
+             display: block; /* Ensures it takes full width */
+		} 
+
+		strong { 
+			color: rgb(8, 18, 8); 
+			/*background-color: aliceblue;*/ 
+			font-weight: bold; 
+		} 
+	</style> 
+</head> 
+
+<body> 
+	<div class="wrapper"> 
+		<div class="top-bar"> 
+			<div class="hero"> 
+				<div class="hero-text"> 
+
+					<!-- Heading -->
+					<h1 class="head">WELCOME TO <strong></strong> HOUSE PRICE/RENT <br> PREDICTION 
+						SYSTEM !</h1> 
+					
+					<!-- Paragraph -->
+					<p class="para">It's a house price prediction system with the help of which you can predict your 
+						house price/rent in just a few seconds... <br> </p> 
+				</div> 
+			</div>  
+			
+			<form action="result"> 
+				<table> 
+					<tr> 
+						<td align="right"> <strong>Average Area Income:</strong> </td> 
+						<td align="left"><input type="text" name="n1"></td> 
+					</tr> 
+					<tr> 
+						<td align="right"> <strong>Avg Area House Age:</strong> </td> 
+						<td align="left"><input type="text" name="n2"></td> 
+					</tr> 
+					<tr> 
+						<td align="right"> <strong>Number of rooms:</strong> </td> 
+						<td align="left"><input type="text" name="n3"></td> 
+					</tr> 
+					<tr> 
+						<td align="right"> <strong>Number of Bedrooms:</strong> </td> 
+						<td align="left"><input type="text" name="n4"></td> 
+					</tr> 
+					<tr> 
+						<td align="right"> <strong>Average Area Population:</strong> </td> 
+						<td align="left"><input type="text" name="n5"></td> 
+					</tr> 
+				</table> 
+				<input type="submit" value="PREDICT"> 
+			</form> 
+			<div class="row"> 
+				<h2><em>{{result2}}</em></h2> 
+			</div> 
+		</div> 
+	</body> 
+</html> 
